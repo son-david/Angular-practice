@@ -1,0 +1,17 @@
+.box {
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+}
+
+button {
+  display: inline-block;
+}
+
+.tools {
+  width: 200px;
+}
+
+input {
+  width : 200px;
+}

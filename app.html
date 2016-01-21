@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body ng-controller='control'>
+
+    <div class='container'>
+
+      <div class='row tools'>
+        <button ng-click='random()'>randomize</button>
+        <button ng-click='clear()'>clear</button>
+        <button ng-click='create(number)'>Start</button>
+        <input placeholder="input 'n' here and click start" ng-model='number'></input>
+        <span>{{message}}</span>
+      </div>
+
+      <div class='row' ng-style='style'>
+        <div class='col-md-3 box' ng-repeat="obj in container" ng-click='click(obj)' ng-style='obj.style'>
+          <span>{{obj.num}}</span>
+        </div>
+      </div>
+
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
